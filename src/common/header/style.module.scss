@@ -1,0 +1,104 @@
+// @import   "../../statics/img/logo.png";
+.headWarpper {
+  position: relative;
+  height: 56px;
+  border-bottom: 1px solid #f0f0f0;
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100px;
+    height: 56px;
+    background: url("../../statics/img/logo.png");
+    background-size: contain;
+  }
+  .Nav {
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    .navitem {
+      line-height: 56px;
+      font-size: 17px;
+      padding: 0 15px;
+      color: #333;
+      position: relative;
+      cursor: pointer;
+      &.left {
+        float: left;
+      }
+      &.right {
+        float: right;
+        color: #969696;
+      }
+      &.active {
+        color: #ea6f5a;
+      }
+      .searchWarpper{
+        .search {
+            position: relative;
+            padding: 0 40px 0 20px;
+            width: 160px;
+            height: 38px;
+            font-size: 14px;
+            border: 1px solid #eee;
+            border-radius: 40px;
+            background: #eee;
+            cursor: text;
+            margin-top: 7px;
+            display: inline;
+            transition:all 0.5s ;
+            &.foucus{
+                width: 200px;
+            }
+          }
+          .iconfont {
+            text-align: center;
+            line-height: normal;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            color: #969696;
+            text-align: center;
+            z-index: 1;
+          }
+      }
+      
+    }
+  }
+  .addtion {
+    position: absolute;
+    right: 200px;
+    top: 0;
+    height: 56px;
+    .btn_rigister {
+      float: right;
+      width: 80px;
+      height: 38px;
+      line-height: 24px;
+      margin: 9px 5px 0 15px;
+      border: 1px solid rgba(236, 97, 73, 0.7);
+      border-radius: 20px;
+      font-size: 15px;
+      color: #ea6f5a;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    .btn_write {
+      float: right;
+      width: 100px;
+      height: 40px;
+      line-height: 24px;
+      margin: 8px 12px 0;
+      border-radius: 20px;
+      font-size: 15px;
+      color: #fff;
+      background-color: #ea6f5a;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
