@@ -35,38 +35,86 @@
       &.active {
         color: #ea6f5a;
       }
-      .searchWarpper{
+      .searchWarpper {
+        transition: all 0.5s;
+        position: relative;
         .search {
-            position: relative;
-            padding: 0 40px 0 20px;
-            width: 160px;
-            height: 38px;
+          padding: 0 40px 0 20px;
+          width: 160px;
+          height: 38px;
+          font-size: 14px;
+          border: 1px solid #eee;
+          border-radius: 40px;
+          background: #eee;
+          cursor: text;
+          margin-top: 7px;
+          display: inline;
+          transition: all 0.5s;
+          &.focused {
+            width: 200px;
+          }
+        }
+        .iconfont {
+          text-align: center;
+          line-height: 40px;
+          position: absolute;
+          top: 10px;
+          right: 0px;
+          width: 40px;
+          height: 40px;
+          color: #969696;
+          text-align: center;
+          z-index: 1;
+          border-radius: 50%;
+          transition: all 0.5s;
+          &.focused {
+            background-color: #777;
+          }
+        }
+        .searchInfo {
+          position: absolute;
+          left: 0;
+          top: 56px;
+          width: 250px;
+          padding: 0 20px;
+          border-radius: 5px;
+          
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          .loading{
+            text-align: center;
+            font-size: 40px;
+          }
+          .searchInfoTitle {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            line-height: 20px;
             font-size: 14px;
-            border: 1px solid #eee;
-            border-radius: 40px;
-            background: #eee;
-            cursor: text;
-            margin-top: 7px;
-            display: inline;
-            transition:all 0.5s ;
-            &.foucus{
-                width: 200px;
+            color: #969696;
+            .searchInfoSwitch {
+              float: right;
+              cursor: pointer;
+              .switchicon{
+                transition: all 0.5s ;
+              }
             }
           }
-          .iconfont {
-            text-align: center;
-            line-height: normal;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 30px;
-            height: 30px;
-            color: #969696;
-            text-align: center;
-            z-index: 1;
+          .searchInfoList{
+            overflow: hidden;
+            .searchInfoItem{
+              line-height: 20px;
+              padding: 0 5px;
+              font-size: 12px;
+              border: 1px solid #ddd;
+              color: #777;
+              border-radius: 5px;
+              display: block;
+              float: left;
+              margin: 10px 5px;
+              padding: 0 10px;
+            }
           }
+        }
       }
-      
     }
   }
   .addtion {
