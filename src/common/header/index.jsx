@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
-// getlist
+
 
 // ----------------------------------
 class Header extends Component {

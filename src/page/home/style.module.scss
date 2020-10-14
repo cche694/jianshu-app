@@ -1,0 +1,78 @@
+.homeWrapper {
+  overflow: hidden;
+  width: 960px;
+  margin: 0 auto;
+
+  .homeLeft {
+    margin-left: 15px;
+    padding-top: 30px;
+    width: 625px;
+    float: left;
+    .topicWrapper {
+      padding: 20px 0 10px 0;
+      overflow: hidden;
+      margin-left: -20px;
+      .topicItem {
+        float: left;
+        margin-left: 20px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        background: #f7f7f7;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        text-align: center;
+        padding-right: 10px;
+        margin-bottom: 10px;
+        .topicItemImg {
+          display: block;
+          float: left;
+          width: 31px;
+          height: 31px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .listItemWarpper {
+      .listItem {
+        position: relative;
+        width: 100%;
+        margin: 0 0 15px;
+        padding: 15px 2px 20px 0;
+        border-bottom: 1px solid #f0f0f0;
+        .wrapimg{
+          position: absolute;
+          top: 50%;
+          margin-top: -60px;
+          right: 0;
+          width: 125px;
+          height: 100px;
+        }
+        .listInfo {
+          padding-right: 165px;
+          .listInfoTitle {
+            margin: -7px 0 4px;
+            display: inherit;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+          }
+          .listInfoAbstract {
+            margin: 0 0 8px;
+            font-size: 13px;
+            line-height: 24px;
+            color: #999;
+          }
+        }
+      }
+    }
+    .bannerImg {
+      height: 270px;
+      width: 625px;
+    }
+  }
+  .homeRight {
+    width: 240px;
+    float: right;
+  }
+}
