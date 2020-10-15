@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
-
+import { Link } from "react-router-dom";
 
 // ----------------------------------
 class Header extends Component {
@@ -41,7 +41,6 @@ class Header extends Component {
         );
       }
     }
-
     if (focused || mouseIn) {
       return (
         <div
@@ -81,7 +80,9 @@ class Header extends Component {
     return (
       <div>
         <div className={headerStyle.headWarpper}>
-          <a href="/" className={headerStyle.logo}></a>
+          <Link to="/">
+            <div className={headerStyle.logo}></div>
+          </Link>
           <ul className={headerStyle.Nav}>
             <li
               className={`${headerStyle.navitem} ${headerStyle.active} ${headerStyle.left} `}

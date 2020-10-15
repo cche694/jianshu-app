@@ -40,7 +40,7 @@
         margin: 0 0 15px;
         padding: 15px 2px 20px 0;
         border-bottom: 1px solid #f0f0f0;
-        .wrapimg{
+        .wrapimg {
           position: absolute;
           top: 50%;
           margin-top: -60px;
@@ -65,7 +65,21 @@
           }
         }
       }
+      .loadMore {
+        height: 40px;
+        margin: 30px auto 60px;
+        padding: 10px 15px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 20px;
+        color: #fff;
+        background-color: #a5a5a5;
+        display: block;
+        line-height: 20px;
+        cursor: pointer;
+      }
     }
+
     .bannerImg {
       height: 270px;
       width: 625px;
@@ -74,5 +88,49 @@
   .homeRight {
     width: 240px;
     float: right;
+    padding-top: 30px;
+    .recWrapper {
+      .recBoard {
+        margin-top: -4px;
+        padding-bottom: 4px;
+        min-height: 228px;
+        border-radius: 5px;
+        .recLink {
+          cursor: pointer;
+          .recImg {
+            width: 100%;
+            min-height: 50px;
+            margin-bottom: 6px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+    .writerWrapper {
+      margin-bottom: 20px;
+      padding-top: 0;
+      font-size: 13px;
+      text-align: center;
+      border: 1px solid #eee;
+      min-height: 440px;
+    }
+  }
+  .backToTopWrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1040;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    transition: 0.1s ease-in;
+    .backToTop {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      display: block;
+      padding-top: 10px;
+      font-size: 20px;
+    }
   }
 }

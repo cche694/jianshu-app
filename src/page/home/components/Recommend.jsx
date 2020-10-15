@@ -1,14 +1,36 @@
-import React, { Component } from 'react';
-class Recommend extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
-        return ( 
-            <div>Recommend</div>
-         );
-    }
+import React, { PureComponent } from "react";
+import RStyle from "../style.module.scss";
+import { connect } from "react-redux";
+class Recommend extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    const { list } = this.props;
+    return (
+      <div className={`${RStyle.recWrapper}`}>
+        <div className={`${RStyle.recBoard}`}>
+          {list.map((item) => {
+            return (
+              <a
+                href="#"
+                className={`${RStyle.recItem}`}
+                key={item.id}
+              >
+                <img src={item.imgUrl} alt="2" className={`${RStyle.recImg}`} />
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 }
- 
-export default Recommend;
+const mapStateToProps = (state) => {
+  return {
+    list: state.getIn(["home", "recList"]),
+  };
+};
+
+export default connect(mapStateToProps, null)(Recommend);
