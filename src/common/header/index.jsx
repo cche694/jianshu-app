@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
+import { ActionCreator as LoginActionCreator } from "../../page/login/store";
 import { Link } from "react-router-dom";
 
 // ----------------------------------
@@ -117,19 +118,35 @@ class Header extends Component {
                 {this.getItemList()}
               </div>
             </li>
-            <li className={`${headerStyle.navitem} ${headerStyle.right}`}>
-              登录
-            </li>
+            {this.props.loginStatus ? (
+              <li
+                className={`${headerStyle.navitem} ${headerStyle.right}`}
+                onClick={this.props.logout}
+              >
+                退出
+              </li>
+            ) : (
+              <Link to="/login">
+                {" "}
+                <li className={`${headerStyle.navitem} ${headerStyle.right}`}>
+                  登录
+                </li>
+              </Link>
+            )}
+
             <li className={`${headerStyle.navitem} ${headerStyle.right}`}>
               Aa
             </li>
           </ul>
+
           <div className={`${headerStyle.addtion}`}>
             <button className={`${headerStyle.btn_rigister}`}>注册</button>
-            <button className={`${headerStyle.btn_write}`}>
-              <EditFilled />
-              写文章
-            </button>
+            <Link to="/write">
+              <button className={`${headerStyle.btn_write}`}>
+                <EditFilled />
+                写文章
+              </button>{" "}
+            </Link>
           </div>
         </div>
       </div>
@@ -143,6 +160,7 @@ const mapStateToProps = (state) => {
     page: state.getIn(["header", "page"]),
     totalPage: state.getIn(["header", "totalPage"]),
     mouseIn: state.getIn(["header", "mouseIn"]),
+    loginStatus: state.getIn(["login", "loginStatus"]),
   };
 };
 const mapDispatchToState = (dispatch) => {
@@ -170,6 +188,10 @@ const mapDispatchToState = (dispatch) => {
       } else {
         dispatch(actionCreators.changePage(1));
       }
+    },
+    logout() {
+      console.log("tuichu");
+      dispatch(LoginActionCreator.logout());
     },
   };
 };

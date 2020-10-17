@@ -16,9 +16,9 @@ class Recommend extends PureComponent {
               <a
                 href="#"
                 className={`${RStyle.recItem}`}
-                key={item.id}
+                key={item.get("id")}
               >
-                <img src={item.imgUrl} alt="2" className={`${RStyle.recImg}`} />
+                <img src={item.get("imgUrl")} alt="2" className={`${RStyle.recImg}`} />
               </a>
             );
           })}

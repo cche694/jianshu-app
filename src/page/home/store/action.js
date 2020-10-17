@@ -10,7 +10,7 @@ const getHomeDataAction = (data) => ({
 });
 const getMoreListAction=(data,nextPage)=>({
   type:ActionType.GET_MORE_LIST,
-  moreList:data.moreList,
+  moreList:fromJS(data.moreList),
   nextPage:nextPage
 })
 export const getHomedata = () => {

@@ -10,12 +10,12 @@ class Topic extends PureComponent {
         {topicList ? (
           topicList.map((item) => {
             return (
-              <div className={`${topicStyle.topicItem} `} key={item.id}>
+              <div className={`${topicStyle.topicItem} `} key={item.get('id')}>
                 <img
-                  src={item.imgUrl}
+                  src={item.get("imgUrl")}
                   className={`${topicStyle.topicItemImg}`}
                 />
-                {item.title}
+                {item.get("title")}
               </div>
             );
           })

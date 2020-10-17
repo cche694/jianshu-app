@@ -28,6 +28,7 @@ class Home extends PureComponent {
     window.removeEventListener("scroll", this.props.changeWindowScroll);
   }
   render() {
+
     return (
       <div className={`${homeStyle.homeWrapper}`}>
         <div className={`${homeStyle.homeLeft}`}>
@@ -59,6 +60,7 @@ class Home extends PureComponent {
 const mapStateToProps = (state) => {
   return {
     show: state.get("home").get("show"),
+    loginStatus:state.get("login").get("loginStatus")
   };
 };
 const mapDispatchToState = (dispatch) => {
